@@ -55,7 +55,14 @@
         }
 
         .emote-placeholder {
-            background: linear-gradient(135deg, #1e2937 0%, #334155 100%);
+            background-color: #1e293b;
+            background-image:
+                linear-gradient(45deg, #162137 25%, transparent 25%),
+                linear-gradient(-45deg, #162137 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #162137 75%),
+                linear-gradient(-45deg, transparent 75%, #162137 75%);
+            background-size: 12px 12px;
+            background-position: 0 0, 0 6px, 6px -6px, -6px 0px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -184,12 +191,12 @@
                         <div class="relative bg-slate-900 border border-slate-700 rounded-3xl p-3 shadow-2xl">
                             <div class="grid grid-cols-3 gap-3">
                                 <!-- Mini emote previews -->
-                                <div class="aspect-square bg-slate-800 rounded-2xl flex items-center justify-center text-6xl">🦊</div>
-                                <div class="aspect-square bg-slate-800 rounded-2xl flex items-center justify-center text-6xl">😺</div>
-                                <div class="aspect-square bg-slate-800 rounded-2xl flex items-center justify-center text-6xl">🐰</div>
-                                <div class="aspect-square bg-slate-800 rounded-2xl flex items-center justify-center text-6xl">🐼</div>
-                                <div class="aspect-square bg-slate-800 rounded-2xl flex items-center justify-center text-6xl">🐸</div>
-                                <div class="aspect-square bg-slate-800 rounded-2xl flex items-center justify-center text-6xl">🐨</div>
+                                <div class="aspect-square bg-slate-800 rounded-2xl overflow-hidden"><img src="emotes/cat-tongue.png" class="w-full h-full object-contain"></div>
+                                <div class="aspect-square bg-slate-800 rounded-2xl overflow-hidden"><img src="emotes/rabbit-surprise.png" class="w-full h-full object-contain"></div>
+                                <div class="aspect-square bg-slate-800 rounded-2xl overflow-hidden"><img src="emotes/panda-sleep.png" class="w-full h-full object-contain"></div>
+                                <div class="aspect-square bg-slate-800 rounded-2xl overflow-hidden"><img src="emotes/frog-happy.png" class="w-full h-full object-contain"></div>
+                                <div class="aspect-square bg-slate-800 rounded-2xl overflow-hidden"><img src="emotes/frog-happy-animated.gif" class="w-full h-full object-contain"></div>
+                                <div class="aspect-square bg-slate-800 rounded-2xl overflow-hidden"><img src="emotes/koala.png" class="w-full h-full object-contain"></div>
                             </div>
                             <div class="mt-3 text-center">
                                 <div class="text-xs uppercase tracking-[2px] text-slate-500 font-medium">Featured in 40+ streams</div>
@@ -242,41 +249,30 @@
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             <!-- Emote 1 -->
             <div class="emote-card group bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden">
-                <div class="emote-placeholder aspect-square text-[5.5rem]">
-                    🦊
+                <div class="emote-placeholder aspect-square p-4">
+                    <img src="emotes/cat-tongue.png" class="w-full h-full object-contain" alt="Cat Tongue">
                 </div>
                 <div class="p-4">
-                    <div class="font-semibold">Happy Fox</div>
+                    <div class="font-semibold">Cat Tongue</div>
                     <div class="text-xs text-slate-400">Chibi • Static • 2026</div>
                 </div>
             </div>
             
             <!-- Emote 2 -->
             <div class="emote-card group bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden">
-                <div class="emote-placeholder aspect-square text-[5.5rem]">
-                    😺
+                <div class="emote-placeholder aspect-square p-4">
+                    <img src="emotes/rabbit-surprise.png" class="w-full h-full object-contain" alt="Surprised Rabbit">
                 </div>
                 <div class="p-4">
-                    <div class="font-semibold">Sassy Cat</div>
+                    <div class="font-semibold">Surprised Rabbit</div>
                     <div class="text-xs text-slate-400">Chibi • Static • 2026</div>
                 </div>
             </div>
             
             <!-- Emote 3 -->
             <div class="emote-card group bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden">
-                <div class="emote-placeholder aspect-square text-[5.5rem]">
-                    🐰
-                </div>
-                <div class="p-4">
-                    <div class="font-semibold">Excited Bunny</div>
-                    <div class="text-xs text-slate-400">Chibi • Static • 2026</div>
-                </div>
-            </div>
-            
-            <!-- Emote 4 -->
-            <div class="emote-card group bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden">
-                <div class="emote-placeholder aspect-square text-[5.5rem]">
-                    🐼
+                <div class="emote-placeholder aspect-square p-4">
+                    <img src="emotes/panda-sleep.png" class="w-full h-full object-contain" alt="Sleepy Panda">
                 </div>
                 <div class="p-4">
                     <div class="font-semibold">Sleepy Panda</div>
@@ -284,10 +280,21 @@
                 </div>
             </div>
             
-            <!-- Emote 5 -->
+            <!-- Emote 4 -->
             <div class="emote-card group bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden">
-                <div class="emote-placeholder aspect-square text-[5.5rem]">
-                    🐸
+                <div class="emote-placeholder aspect-square p-4">
+                    <img src="emotes/frog-happy.png" class="w-full h-full object-contain" alt="Happy Frog">
+                </div>
+                <div class="p-4">
+                    <div class="font-semibold">Happy Frog</div>
+                    <div class="text-xs text-slate-400">Chibi • Static • 2026</div>
+                </div>
+            </div>
+            
+            <!-- Emote 5 -->
+            <div class="emote-card group bg-slate-900 border border border-slate-700 rounded-3xl overflow-hidden">
+                <div class="emote-placeholder aspect-square p-4">
+                    <img src="emotes/frog-happy-animated.gif" class="w-full h-full object-contain" alt="Happy Frog Animated">
                 </div>
                 <div class="p-4">
                     <div class="font-semibold">Party Frog</div>
@@ -297,8 +304,8 @@
             
             <!-- Emote 6 -->
             <div class="emote-card group bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden">
-                <div class="emote-placeholder aspect-square text-[5.5rem]">
-                    🐨
+                <div class="emote-placeholder aspect-square p-4">
+                    <img src="emotes/koala.png" class="w-full h-full object-contain" alt="Chill Koala">
                 </div>
                 <div class="p-4">
                     <div class="font-semibold">Chill Koala</div>
@@ -306,8 +313,6 @@
                 </div>
             </div>
         </div>
-        
-        <p class="text-center text-xs text-slate-500 mt-6">* Replace these placeholders with screenshots of your actual emotes (T-Rex, Purple Cat, etc.). All delivered files are 112×112 / 56×56 / 28×28 PNGs with transparent backgrounds.</p>
     </section>
 
     <!-- ABOUT / STYLE -->
